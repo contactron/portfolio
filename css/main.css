@@ -1,0 +1,235 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    font-family: 'Yantramanav', sans-serif;
+}
+
+/*Grid*/
+
+.grid {
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+}
+
+.col-1 {
+    width: 8.33%;
+}
+
+.col-2 {
+    width: 16.66%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.33%;
+}
+
+.col-5 {
+    width: 41.66%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.33%;
+}
+
+.col-8 {
+    width: 66.66%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.33%;
+}
+
+.col-11 {
+    width: 91.66%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+/*Default Styles*/
+
+.header {
+    border-bottom-style: solid;
+    border-bottom-width: 6px;
+    border-bottom-color: #2d3c49;
+    margin-bottom: 20px;
+}
+
+#header_logo {
+    height: 90px;
+    padding: 10px 0px;
+}
+
+/*Vertically align header title and text*/
+#header_title_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#header_title {
+    color: #2d3c49;
+    text-align: right;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 48px;
+    margin: 0px;
+    line-height:1;
+}
+
+#header_text  {
+    text-align: right;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 20px;
+    margin: 0px;
+    line-height:1;
+}
+
+#hero {
+    padding: 0 0 20px 0
+}
+
+/*#hidden_heading Used to hide the heading for the hero image which is required to pass the html validation checker. Also good for accessibility*/
+
+#hidden_heading {
+    display:none;
+}
+
+.hero_image {
+    width: 100%;
+    border:1px solid #021a40;
+}
+
+.featured_work_title {
+    margin: 0px 0px 0px 20px;
+    font-size: 36px;
+    color: #2d3c49;
+}
+
+.work_sample {
+    padding: 15px 10px 20px 10px;
+    text-align:center;
+}
+
+.work_sample_image {
+    width: 100%;
+    border:1px solid #021a40;
+}
+
+.work_sample_title {
+    margin: 10px 0px 0px;
+    text-transform: uppercase;
+    font-size: 30px;
+    line-height: 1;
+}
+
+.work_sample_link {
+    font-size: 16px;
+}
+
+.footer {
+    border-top-style: solid;
+    border-top-width: 2px;
+    border-top-color: #2d3c49;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/*Responsive*/
+
+@media screen and (max-width: 450px) {
+    #header_logo {
+        height: 120px;
+    }
+
+    #logo_box {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    #header_title_text {
+        width: 100%;
+    }
+
+    #header_title {
+        text-align: center;
+    }
+
+    #header_text {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    #hero {
+        display: none;
+    }
+
+    .work_sample {
+        width: 100%;
+    }
+
+    .work_sample {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+@media screen and (min-width: 451px) and (max-width: 900px) {
+    .work_sample {
+        width: 50%;
+    }
+
+    /*Removes the padding from the right of elements in the 1st column*/
+    .work_sample:nth-of-type(2n-1) {
+        padding-right: 20px;
+        padding-left: 0px;
+    }
+
+    /*Removes the padding from the right of elements in the 2nd column*/
+    .work_sample:nth-of-type(2n+0) {
+        padding-right: 0px;
+        padding-left: 20px;
+      }
+}
+
+@media screen and (min-width: 900px) {
+    .work_sample {
+        width: 33%;
+    }
+
+    .work_sample:nth-of-type(3n-2) {
+        padding-left: 0px;
+        padding-right: 20px;
+    }
+
+    .work_sample:nth-of-type(3n+0) {
+        padding-right: 0px;
+        padding-left: 20px;
+    }
+}
